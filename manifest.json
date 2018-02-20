@@ -1,7 +1,7 @@
 {
   "name": "Codify",
-  "description": "Checks for malicious phishing URLs that use other alphabet characters",
-  "version": "1.02",
+ "icons": {"128":"CodifyIcon.png"}, "description": "Checks for malicious phishing URLs that use other alphabet characters",
+  "version": "1.03",
   "background": {
      "scripts": ["background.js"],
      "persistent": false
