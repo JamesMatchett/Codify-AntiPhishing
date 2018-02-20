@@ -1,0 +1,14 @@
+{
+  "name": "Codify",
+  "description": "Checks for malicious phishing URLs that use other alphabet characters",
+  "version": "1.3",
+  "background": {
+     "scripts": ["background.js"],
+     "persistent": false
+   },
+  "permissions": ["storage", "activeTab", "tabs"],
+  "browser_action": {
+      "name": "Click to toggle On/Off"
+  },
+  "manifest_version": 2
+}
