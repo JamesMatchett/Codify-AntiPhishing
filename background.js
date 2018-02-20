@@ -22,6 +22,7 @@ function updateIcon() {
     chrome.browserAction.setIcon({path: 'icon' + current + '.png'});
     current++;
     if (current > 2) {
+        ParseUrl();
         current = 1;
     }
     chrome.storage.sync.set({number: current}, function() {
