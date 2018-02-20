@@ -6,13 +6,18 @@
 
 
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.sync.set({ number: 1 }, function () { });
+alert("first time install");
+    chrome.storage.sync.set({ 'number': 1 }, function () { });
     setIcon(2);
 
 });
 
 function setIcon(Innumber) {
-    chrome.storage.sync.set({ number: Innumber }, function () { });
+var nax;
+if(Innumber == 1){
+ nax = 2;} else{
+nax = 1;}
+    chrome.storage.sync.set({ number: nax }, function () { });
     chrome.browserAction.setIcon({ path: 'icon' + Innumber + '.png' });
 }
 
