@@ -95,7 +95,7 @@ function ParseUrl() {
                         var ActualChar;
                         ActualChar =  String.fromCharCode(DecNumber);
                         
-                        alert("URL contains non-alphabetic character sequence '"+ ActualChar + "' Be careful it is the right Webpage! Ascii is "+DecNumber);
+                        alert("URL contains non-alphabetic character sequence '"+ ActualChar + "' Be careful it is the right Webpage!");
                         x=tab.url.length;
                     }
                     }
