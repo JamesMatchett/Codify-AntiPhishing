@@ -6,7 +6,7 @@
 
 
 chrome.runtime.onInstalled.addListener(function () {
-alert("first time install");
+
     chrome.storage.sync.set({ 'number': 1 }, function () { });
     setIcon(2);
 
@@ -69,7 +69,7 @@ function ParseUrl() {
     }, function (tabs) {
         // and use that tab to fill in out title and url
         var tab = tabs[0];
-        //alert(tab.url);
+       
 
         if (tab.url.includes("xn--", 0)) {
             alert("URL includes PUNYcode style address, Be careful it is the right Webpage! "+ tab.url);
@@ -80,6 +80,29 @@ function ParseUrl() {
             if(tab.url.charCodeAt(x) > 127){
                 alert("URL contains non-alphabetic character "+tab.charAt(x) + " Be careful it is the right Webpage!");
             }
+
+        for(x = 0; x<tab.url.length;x++){
+            if(tab.url.charAt(x)== "%"){
+                //if 0123456789ABCDEFG
+                if((tab.url.charCodeAt(x+1) >= 48 && tab.url.charCodeAt(x+1) <= 57) || tab.url.charCodeAt(x+1) >= 65 && tab.url.charCodeAt(x+1) <= 70){
+                    if((tab.url.charCodeAt(x+1) >= 48 && tab.url.charCodeAt(x+1) <= 57) || tab.url.charCodeAt(x+1) >= 65 && tab.url.charCodeAt(x+1) <= 70){
+                         
+                    var HexString = (tab.url.charAt(x+1) + tab.url.charAt(x+2));
+                    var DecNumber = parseInt(HexString, 16);
+                    
+                    if(DecNumber > 127){
+                        
+                        var ActualChar;
+                        ActualChar =  String.fromCharCode(DecNumber);
+                        
+                        alert("URL contains non-alphabetic character sequence '"+ ActualChar + "' Be careful it is the right Webpage! Ascii is "+DecNumber);
+                        x=tab.url.length;
+                    }
+                    }
+                }
+               
+            }
+        }
         }
     });
 }
