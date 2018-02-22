@@ -75,13 +75,24 @@ function ParseUrl() {
             alert("URL includes PUNYcode style address, Be careful it is the right Webpage! "+ tab.url);
         }
 
-        var x = 0;
+        var upto; 
+        var slashcount = 0;
         for (x = 0; x < tab.url.length; x++){
+            if(tab.charAt(x) == "/"){
+            slashcount = slashcount +1;
+            }
+            if(slashcount == 3){
+                upto =x;
+                x=tab.url.length;
+            }
+        }
+        var x = 0;
+        for (x = 0; x < upto; x++){
             if(tab.url.charCodeAt(x) > 127){
                 alert("URL contains non-alphabetic character "+tab.charAt(x) + " Be careful it is the right Webpage!");
             }
 
-        for(x = 0; x<tab.url.length;x++){
+        for(x = 0; x<upto;x++){
             if(tab.url.charAt(x)== "%"){
                 //if 0123456789ABCDEFG
                 if((tab.url.charCodeAt(x+1) >= 48 && tab.url.charCodeAt(x+1) <= 57) || tab.url.charCodeAt(x+1) >= 65 && tab.url.charCodeAt(x+1) <= 70){
