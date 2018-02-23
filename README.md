@@ -5,6 +5,7 @@ https://chrome.google.com/webstore/detail/codify/cplgcomagdnbbbaeipanninffcpiaki
 Below are URLs which resolve to different addresses than the human readable equivalent, test the addon by installing it, making sure it's on (green icon) (click the icon to toggle) and make sure an alert comes up.
 
 Test at http://аррӏе.com
+
 https://xn--80ak6aa92e.com/
 
 http://adidạs.com/shoes/ .
