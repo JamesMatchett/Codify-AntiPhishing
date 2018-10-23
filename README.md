@@ -1,4 +1,4 @@
-﻿# Chrome-URL-phish-detector-extension
+﻿# Codify: Chrome addon for Phishing protection
 Now on the playstore! at
 https://chrome.google.com/webstore/detail/codify/cplgcomagdnbbbaeipanninffcpiakil
 
