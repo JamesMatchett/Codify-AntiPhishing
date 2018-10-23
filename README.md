@@ -2,6 +2,10 @@
 Now on the playstore! at
 https://chrome.google.com/webstore/detail/codify/cplgcomagdnbbbaeipanninffcpiakil
 
+## This addon parses URLs in chrome to ensure there is no host-level manipulation commonly used in phising attacks.
+
+### When a type of phishing attack is detected in the URL then a relevant popup-error is thrown to alert the user
+
 Below are URLs which resolve to different addresses than the human readable equivalent, test the addon by installing it, making sure it's on (green icon) (click the icon to toggle) and make sure an alert comes up.
 
 Test at http://аррӏе.com
