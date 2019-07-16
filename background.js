@@ -1,4 +1,4 @@
-// Copyright (c) 2011 The Chromium Authors. All rights reserved.
+// Copyright (c) 2011 The Chromium Authors. All rights reserved. (Used their script as a guide to the structure of chrome addons, feels bad to not credit them at all)
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
